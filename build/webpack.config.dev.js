@@ -51,7 +51,14 @@ module.exports = merge(baseConfig, {
     // color: true,
     // 设置代理
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': {
+        target:'http://localhost:3000',
+        pathRewrite: {'^/api' : ''}
+      }
+    },
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
     }
   },
 

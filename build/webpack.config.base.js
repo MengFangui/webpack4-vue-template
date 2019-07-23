@@ -15,13 +15,14 @@ module.exports = {
   entry: './src/index.js',
   resolve: {
     // 自动解析确定的扩展。能够使用户在引入模块时不带扩展
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.less'],
     // 创建 import 或 require 的别名，来确保模块引入变得更简单。
     alias: {
       'assets': utils.resolve('assets'),
       'pages': utils.resolve('src/pages'),
       'static': utils.resolve('static'),
       'components': utils.resolve('src/components'),
+      '@': utils.resolve('src'),
       'vue$': 'vue/dist/vue.runtime.esm.js'
     }
   },
